@@ -1,16 +1,27 @@
+/* Global Reset and Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #f8fafc;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigation Menu */
+header {
+    background-color: #1e293b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1e293b;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 1rem 2rem;
 }
 
@@ -18,7 +29,15 @@ body {
     color: #facc15;
     font-weight: bold;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s;
+}
+
+.logo:hover {
+    opacity: 0.85;
 }
 
 .nav-links {
@@ -26,20 +45,21 @@ body {
     display: flex;
     gap: 1.5rem;
     margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #cbd5e1;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background 0.3s, color 0.3s;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Mouse over feedback */
 .nav-links a:hover {
     background-color: #334155;
     color: #facc15;
-    border-radius: 4px;
 }
 
 /* Active page feedback */
@@ -50,15 +70,51 @@ body {
     border-bottom: 2px solid #facc15;
 }
 
+/* Main Content Layout */
 main {
-    padding: 2rem;
-    min-height: 70vh;
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
 }
 
+h1 {
+    color: #0f172a;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: #1e293b;
+    margin-top: 1.5rem;
+}
+
+p {
+    line-height: 1.6;
+    color: #475569;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #facc15;
+}
+
+/* Footer Styling */
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: #1e293b;
     color: #94a3b8;
     font-size: 0.9rem;
+    margin-top: auto;
 }
